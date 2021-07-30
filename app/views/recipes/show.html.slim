@@ -1,0 +1,17 @@
+- if @recipe.blank?
+  .flex.justify-center.items-center.h-screen
+    .p-4.bg-yellow-500
+      = 'The recipe does not exist'
+- else
+  .m-auto.max-w-5xl.pb-32
+    = image_tag(@recipe.photo.url, title: @recipe.photo.title, width: "100%", class: 'rounded-xl mt-10')
+    .font-bold.text-center
+      = @recipe.title
+    .p-4.bg-gray-100.rounded.mt-10
+      = markdown @recipe.description
+    .mt-4.font-bold.mb-2
+      = 'Chef: '
+      = @recipe.fields[:chef]&.name || 'Not available'
+    - @recipe.fields[:tags]&.each do |tag|
+      .p-1.mr-2.bg-yellow-400.rounded.inline-block.font-bold.text-sm
+        = tag.name

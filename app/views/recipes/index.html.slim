@@ -1,0 +1,12 @@
+- if @recipes.blank?
+  .flex.justify-center.items-center.h-screen
+    .p-4.bg-yellow-500
+      = 'No recipes to show'
+- else
+  .m-auto.max-w-5xl
+    - @recipes.each do |recipe|
+      .flex.p-6
+        = link_to recipe_path(recipe.id) do
+          = image_tag(recipe.photo.url, title: recipe.photo.title, width: "100%", class: 'rounded-xl')
+          .font-bold.text-center
+            = recipe.title
