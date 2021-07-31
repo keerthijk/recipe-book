@@ -7,7 +7,7 @@ This application list Marley Spoon recipes.
 
 # Local setup
 * Clone the respository - `git clone https://github.com/keerthijk/recipe-book.git`
-* Go to the project folder - `cd recipe_book`
+* Go to the project folder - `cd recipe-book`
 * Run bundle - `bundle`
 * Please create a master.key file inside the config folder and paste the key - `2e6a2af5900b437c1ad94af12e38f57c`
   
