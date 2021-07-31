@@ -2,7 +2,6 @@ require 'contentful'
 module Recipe
   module Operation
     class GetAll < Trailblazer::Operation
-
       step :set_client
       step :get_recipes
 
@@ -12,14 +11,13 @@ module Recipe
           space: contentful_config[:space_id],
           access_token: contentful_config[:access_token],
           environment: contentful_config[:environment_id],
-          dynamic_entries: :auto
+          dynamic_entries: :auto,
         )
       end
 
       def get_recipes(options, **)
         options[:collection] = options[:client].entries(content_type: 'recipe')
       end
-
     end
   end
 end
