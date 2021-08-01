@@ -1,25 +1,23 @@
-# README
+# Recipe Book
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This application list Marley Spoon recipes.
 
-Things you may want to cover:
 
-* Ruby version
+* Ruby version: `ruby '2.6.6'`
 
-* System dependencies
+# Local setup
+* Clone the respository - `git clone https://github.com/keerthijk/recipe-book.git`
+* Go to the project folder - `cd recipe-book`
+* Run bundle - `bundle`
+* Please create a master.key file inside the config folder and paste the key - `2e6a2af5900b437c1ad94af12e38f57c`
+  
+* Run local server: `rails s`
+* Visit `http://localhost:3000/` - It should show the list of recipes
+* Click on each recipe - It should show detailed view of each recipe
 
-* Configuration
 
-* Database creation
+* To run the test: `rspec`
 
-* Database initialization
+* To run rubocop(Ruby static code analyzer and code styler): `rubocop`
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# recipe-book
