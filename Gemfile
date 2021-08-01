@@ -52,6 +52,8 @@ end
 group :development, :test do
   gem 'rails-controller-testing'
   gem 'rspec-rails', '~> 5.0.0'
+  gem 'vcr'
+  gem 'webmock'
 end
 
 gem 'tailwindcss-rails', '~> 0.3.3'

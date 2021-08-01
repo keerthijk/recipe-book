@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Recipe::Operation::GetAll do
+RSpec.describe Recipe::Operation::GetAll, vcr: true do
   let(:result) { described_class.call }
 
   context 'with correct config' do

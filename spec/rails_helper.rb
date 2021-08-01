@@ -52,4 +52,12 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
+  VCR.configure do |c|
+    c.cassette_library_dir = 'spec/cassettes'
+    c.hook_into :webmock
+    c.configure_rspec_metadata!
+    c.filter_sensitive_data('<space_id>') { Rails.application.credentials.contentful[:space_id] }
+    c.filter_sensitive_data('<environment_id>') { Rails.application.credentials.contentful[:environment_id] }
+    c.filter_sensitive_data('<access_token>') { Rails.application.credentials.contentful[:access_token] }
+  end
 end

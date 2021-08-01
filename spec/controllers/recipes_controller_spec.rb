@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe RecipesController, type: :controller do
+RSpec.describe RecipesController, type: :controller, vcr: true do
   describe 'GET index' do
     it 'returns a 200' do
       get :index
