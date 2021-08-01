@@ -1,5 +1,5 @@
 class ErrorsController < ApplicationController
   def show
-    # render the generic error meeage page
+    # render the generic error page
   end
 end
